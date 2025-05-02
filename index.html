@@ -143,7 +143,10 @@
         
         <!-- Email Form (Right Side) -->
         <div class="email-form">
-            <form id="contactForm" action="send-email.php" method="POST">
+            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="365e41b7-e2e4-4784-834d-b0a2749fe0aa">
+
                 <label for="name">Your Name:</label>
                 <input type="text" id="name" name="name" required placeholder="Enter your name">
                 
