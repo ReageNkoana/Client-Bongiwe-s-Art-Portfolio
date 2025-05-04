@@ -15,7 +15,7 @@ body {
 }
 
 .logo img {
-    max-width: 30px;
+    max-width: 35px;
 }
 
 
@@ -28,10 +28,15 @@ body {
     display: flex;
     justify-content: flex-start; /* Align links to the left */
     align-items: center;
-    padding: 15px 30px;
+    padding: 9px 27px;
     background-color: #ffffff;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    z-index: 10;
+    box-shadow: 0 7px 8px rgba(0, 0, 0, 0.2);
+    transition: top 0.4s ease;
+    z-index: 999;
+}
+
+.navbar.hidden {
+    top: -100px; /* adjust based on navbar height */
 }
 
 /* Move navigation links to the left */
@@ -72,6 +77,10 @@ html {
 }
 
 
+#home {
+    padding-top: 100px; /* Adjust based on actual navbar height */
+    margin-top: -100px; /* Compensate visual space for scrollIntoView */
+}
 
 
 
