@@ -7,57 +7,187 @@
     <title>Artist Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="navbar">
-            <div class="logo">
-                <img src="images/logo.jpg" alt="Artist Logo">
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" id="homeLink">Home</a></li>
-                <li><a href="#about" id="aboutLink">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>                
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            
-        </nav>
+            <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">SkeltzArt</div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     </header>
     <main>
 
-        <!-- Home Section -->
-        <section class="intro" id="home">
-            <h1>Welcome to My Art Portfolio</h1>
-            <p>Explore the world of art through my unique perspective.</p>
-            <div class="slideshow-container">
-                <div class="slide fade">
-                    <img src="images/Home Image 1.jpg" alt="Artistic Image 1">
-                </div>
-                <div class="slide fade">
-                    <img src="images/Home Image 2.jpg" alt="Artistic Image 2">
-                </div>
-                <div class="slide fade">
-                    <img src="images/Home Image 3.jpg" alt="Artistic Image 3">
-                </div>
-                <div class="dots-container">
-                    <span class="dot" onclick="showSlide(1)"></span>
-                    <span class="dot" onclick="showSlide(2)"></span>
-                    <span class="dot" onclick="showSlide(3)"></span>
-                </div>
+    <!-- Home Section -->
+    <section class="intro" id="home">
+        <div class="slideshow-container">
+            <div class="slide fade active">
+                <img src="images/logo.jpg" alt="Artistic Image 1">
             </div>
-        </section>
+            <div class="slide fade">
+                <img src="images/Home Image 4.png" alt="Artistic Image 2">
+            </div>
+            <div class="slide fade">
+                <img src="images/Home Image 5.png" alt="Artistic Image 3">
+            </div>
+            <div class="dots-container">
+                <span class="dot active" onclick="showSlide(1)"></span>
+                <span class="dot" onclick="showSlide(2)"></span>
+                <span class="dot" onclick="showSlide(3)"></span>
+            </div>
+        </div>
+        
+        <div class="intro-content">
+            <h1>Welcome to My Artistic Universe</h1>
+            <p>Explore the world of art through my unique perspective.</p>
+        </div>
+        
+
+    </section>
 
         <!-- About Section -->
         <section id="about" class="about">
-            <h2>About Me</h2>
-            <div class="about-container">
-                <div class="about-image">
-                    <img src="images/About me pic.jpg" alt="Artist Portrait">
+                        <h2>About Me</h2>
+            <div class="container hidden" id="aboutSection">
+                <div class="left-pane">
+                <img src="images/About me pic.jpg" alt="Bongiwe Malepe Portrait" class="portrait">
                 </div>
-                <div class="about-text">
-                    <p>Hi, I'm Bongiwe Malepe, an artist passionate about expressing emotions through the strokes of my brush and the colors I choose. My work focuses on abstract art, aiming to provoke thought and evoke deep feelings from the viewer. I draw inspiration from the world around me, from nature to personal experiences, each piece reflecting a moment in time.</p>
-                    <p>With years of experience in painting, I strive to push boundaries and experiment with different mediums, styles, and techniques. Art has been my lifelong journey, and it is a privilege to share it with you.</p>
+
+                <div class="right-pane">
+            
+                <div class="tabs">
+                   <!-- Update your tab buttons to pass the event properly -->
+                    <button class="tab-button active" onclick="openTab(event, 'about-content')">About</button>
+                    <!--button class="tab-button" onclick="openTab(event, 'journey')">My Journey</button-->
+                    <button class="tab-button" onclick="openTab(event, 'education')">Education</button>
+                    <button class="tab-button" onclick="openTab(event, 'experience')">Experience & Engagement</button>
+                    <!--button class="tab-button" onclick="openTab(event, 'certificates')">Certificates</button-->
+                </div>
+
+                <div id="about-content" class="tab-content active">
+                    <p>Hi, I'm <strong>Bongiwe Malepe</strong>, I am a visual artist from Eerstegeluk, a small township in Limpopo, South Africa. I am currently residing in Johannesburg, where I am completing my PGCE at the University of Johannesburg . I hold a <strong>BA in Visual Arts</strong> from the University of Johannesburg, where I majored in painting .My practice includes <strong>painting</strong>,<strong> drawing</strong>, and <strong>collage</strong>, often using <strong>acrylic paint</strong> ,different <strong>ink</strong> types , <strong>diary pages</strong> and <strong>shweshwe fabric</strong> which is a traditional fabric that women from Southern African groups wear.</p>
+                    <p>I explore memory, family history, cultural identity and stories where women, especially mothers or female leaders are powerful characters who guide and keep families together. My work is shaped by the women in my life , especially my mother, whose stories and resilience continue to guide my practice. Throughout my childhood, bullying at school made me feel isolated and scared . In those moments I found peace in the love and strength of the women and family members who held me up when I felt like giving up.</p>
+                </div>
+
+                <div id="journey" class="tab-content">
+                    <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="content">
+                        <h3>2018 – First Exhibition</h3>
+                        <p>Debuted at a local art gallery. Presented 5 abstract pieces inspired by the seasons.</p>
+                        <img src="exhibit2018.jpg" alt="First Exhibition">
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="content">
+                        <h3>2020 – Online Art Showcase</h3>
+                        <p>Participated in a virtual exhibition due to the pandemic. Featured a video introduction to my series.</p>
+                        <video controls width="300">
+                            <source src="showcase2020.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content">
+                        <h3>2020 – Online Art Showcase</h3>
+                        <p>Participated in a virtual exhibition due to the pandemic. Featured a video introduction to my series.</p>
+                        <video controls width="300">
+                            <source src="showcase2020.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content">
+                        <h3>2020 – Online Art Showcase</h3>
+                        <p>Participated in a virtual exhibition due to the pandemic. Featured a video introduction to my series.</p>
+                        <video controls width="300">
+                            <source src="showcase2020.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="content">
+                        <h3>2020 – Online Art Showcase</h3>
+                        <p>Participated in a virtual exhibition due to the pandemic. Featured a video introduction to my series.</p>
+                        <video controls width="300">
+                            <source src="showcase2020.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+
+                <div id="education" class="tab-content">
+                    <ul>
+                    <li><strong>2017 – 2021:</strong> St Thomas College (Highschool)</li>
+                    <li><strong>2022 – 2024:</strong> BA in Visual Arts at the University of Johannesburg</li>
+                    <li><strong>2025 – current:</strong> PGCE (Post Graduate Certificate in Education) at the University of Johannesburg</li>
+
+                    </ul>
+                </div>
+
+                <div id="experience" class="tab-content">
+                    <h1>Community Engagement</h1>
+                    <ul>
+                        <li>
+                            <strong>Long Life Project: Constitutional Hill, Johannesburg, South Africa (2024)</strong><br>
+                            - Engaged in an artwork-based workshop to support the Long Life Project's mission to combat stigma, <br>
+                            hopelessness, and fear associated with HIV/AIDS
+                        </li>
+                        <li>
+                            <strong>Volunteer, Nelson Mandela Day Project: Sci Bono Discovery Centre (2024)</strong><br>
+                            - Assisted and guided students in creating a mural at the science and technology center.
+                        </li>
+                        <li>
+                            <strong>Linocut Printmaking Workshop: Abbots High School, Johannesburg, South Africa<br>8 March 2025</strong><br>
+                            - Participated in a printmaking workshop focused on linocut techniques and guided Learners through the creative process, encouraging artistic expression and technical skills <br>
+                            development
+                        </li>
+                        <li>
+                            <strong>International Exchange Program: University of Johannesburg & University of Cologne<br>
+                            South Africa (October 2024) & Germany (April 2025)</strong><br>
+                            - Participated in a cross-cultural exchange on the theme of “commons”, collaborated with students from the University of Cologne and conducted site-based research and creative engagement in both Johannesburg and Cologne
+                        </li>
+                    </ul>
+                </br>
+
+                <h1>Work Experience</h1>
+                <ul>
+                    <li>
+                        <strong>Aro Parade Student Assistant: Brixton, Johannesburg, South Africa<br>6 August 2024 – 8 August 2024</strong><br>
+                        - Collaborated with a team to design and create art pieces from recycled materials for the Aro parade, promoting environmental awareness and sustainability.
+                    </li>
+                    <li>
+                        <strong>Work Integrated Learning (Teaching Practicals)<br>Roosevelt High School, Johannesburg – April 2025</strong><br>
+                        - Completed teaching practicals as part of the PGCE program <br>
+                        - Taught Visual Art and Creative Arts to high school learners
+                    </li>
+                </ul>
+            </div>
+
+
+                <div id="certificates" class="tab-content">
+                    <ul>
+                    <li>Advanced Acrylic Techniques – ArtSchool Online (2020)</li>
+                    <li>Mixed Media Workshop – Creative Circle (2019)</li>
+                    </ul>
+                </div>
                 </div>
             </div>
         </section>
@@ -65,110 +195,144 @@
  <!-- Gallery Section -->
 <section id="gallery" class="gallery">
     <h2>My Art Gallery</h2>
-    <div class="gallery-container" id="gallery-container">
-        <!-- First 4 Gallery Items (Visible initially) -->
-        <div class="gallery-item">
-            <img src="images/art1.jpg" alt="Art Piece 1" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="images/art2.jpg" alt="Art Piece 2" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="images/art3.jpg" alt="Art Piece 3" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item">
-            <img src="images/art4.jpg" alt="Art Piece 4" class="gallery-image" onclick="openModal(this)">
+
+    
+
+ 
+
+     <h3>Explore a selection of my recent works. Each piece tells a story and captures a moment in my artistic journey.</h3>
+
+<!-- View Toggle Buttons -->
+        <div class="gallery-view-toggle">
+            <button class="view-toggle-btn active" id="normalViewBtn">Normal View</button>
+            <button class="view-toggle-btn" id="threeDViewBtn">3D Gallery View</button>
         </div>
         
-        <!-- Additional Gallery Items (Hidden initially) -->
-        <div class="gallery-item extra-gallery-item">
-            <img src="images/art5.jpg" alt="Art Piece 5" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item extra-gallery-item">
-            <img src="images/art6.jpg" alt="Art Piece 6" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item extra-gallery-item">
-            <img src="images/art7.jpg" alt="Art Piece 7" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item extra-gallery-item">
-            <img src="images/art8.jpg" alt="Art Piece 8" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item extra-gallery-item">
-            <img src="images/art9.jpg" alt="Art Piece 9" class="gallery-image" onclick="openModal(this)">
-        </div>
-        <div class="gallery-item extra-gallery-item">
-            <img src="images/art10.jpg" alt="Art Piece 10" class="gallery-image" onclick="openModal(this)">
+            <!-- Regular Gallery View (max 18 pics)-->
+        <div class="gallery-container" id="gallery-container">
+            <!-- First 4 Gallery Items (Visible initially) -->
+            <div class="gallery-item">
+                <img src="images/art1.jpg" alt="Art Piece 1" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/art2.jpg" alt="Art Piece 2" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/art3.jpg" alt="Art Piece 3" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item">
+                <img src="images/art4.jpg" alt="Art Piece 4" class="gallery-image" onclick="openModal(this)">
+            </div>
+            
+            <!-- Additional Gallery Items (Hidden initially) -->
+            <div class="gallery-item extra-gallery-item">
+                <img src="images/art5.jpg" alt="Art Piece 5" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item extra-gallery-item">
+                <img src="images/art6.jpg" alt="Art Piece 6" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item extra-gallery-item">
+                <img src="images/art7.jpg" alt="Art Piece 7" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item extra-gallery-item">
+                <img src="images/art8.jpg" alt="Art Piece 8" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item extra-gallery-item">
+                <img src="images/art9.jpg" alt="Art Piece 9" class="gallery-image" onclick="openModal(this)">
+            </div>
+            <div class="gallery-item extra-gallery-item">
+                <img src="images/art10.jpg" alt="Art Piece 10" class="gallery-image" onclick="openModal(this)">
+            </div>
+
+                    
         </div>
 
+        <!-- 3D Gallery View -->
+        <div id="threeD-gallery">
+             <p>(Swipe/ Drag the screen to see the other walls artworks.)</p>
 
-    </div>
+            <div class="gallery-3d-container" id="gallery-3d-container">
+                <div class="wall-3d front" id="frontWall-3d"></div>
+                <div class="wall-3d left" id="leftWall-3d"></div>
+                <div class="wall-3d right" id="rightWall-3d"></div>
+            </div>
+
+        </div>
+    
 
     <!-- Toggle Button -->
     <button id="toggleGallery" onclick="toggleGallery()">See More</button>
 </section>
 
 
-
-<!-- Fullscreen Modal for Images -->
+<!-- Enhanced Fullscreen Modal for Images -->
 <div id="imageModal" class="modal" onclick="closeModal(event)">
     <span class="close-btn" onclick="closeModal(event)">×</span>
-    <img class="modal-content" id="modalImage">
-    <div id="caption"></div>
+    <div class="modal-content-container">
+        <img class="modal-image" id="modalImage">
+        <div class="modal-details">
+            <h3 id="artTitle">Artwork Title</h3>
+            <p id="artDescription">Artwork description goes here...</p>
+            <p id="artSize">Size: 24" x 36"</p>
+        </div>
+    </div>
 </div>
 
+<!-- too make the nav bar link underline work so that contact and gallety both are not highlighted -->
+
+<div style="height: 107px;"></div>
 
 
 
 
  <!-- Contact Section -->
 
+<!-- Contact Section -->
 <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-container">
-        <!-- Social Media Links (Left Side) -->
-        <div class="social-media-links">
-            <a href="https://www.instagram.com" target="_blank" class="social-icon">
-                <i class="fa fa-instagram" aria-hidden="true"></i>
-            </a>
-            <a href="https://www.facebook.com" target="_blank" class="social-icon">
-                <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            </a>
-            <!-- Social Media Links (Left Side)
-            <a href="https://www.tiktok.com" target="_blank" class="social-icon">
-                <img src="images/tiktok-icon.png" alt="TikTok">
-            </a-->
-            <a href="https://www.youtube.com" target="_blank" class="social-icon">
-                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-            </a>
-        </div>
-        
-        <!-- Email Form (Right Side) -->
-        <div class="email-form">
-            <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-
-                <input type="hidden" name="access_key" value="365e41b7-e2e4-4784-834d-b0a2749fe0aa">
-
-                <label for="name">Your Name:</label>
-                <input type="text" id="name" name="name" required placeholder="Enter your name">
-                
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Enter your email">
-                
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="message" required placeholder="Enter your message"></textarea>
-                
-                <button type="submit">Send Message</button>
-            </form>
-        </div>
+  <h2>Contact Me</h2>
+  <div class="contact-container">
+    <!-- Left Side: Social Media -->
+    <div class="social-media">
+      <h3>Connect with me</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank" class="social-icon">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com" target="_blank" class="social-icon">
+          <i class="fa fa-facebook-square"></i>
+        </a>
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+          <i class="fa fa-linkedin-square"></i>
+        </a>
+        <a href="https://www.youtube.com" target="_blank" class="social-icon">
+          <i class="fa fa-youtube-play"></i>
+        </a>
+      </div>
     </div>
+
+    <!-- Right Side: Contact Form -->
+    <div class="email-form">
+      <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="365e41b7-e2e4-4784-834d-b0a2749fe0aa" />
+        
+        <input type="text" id="name" name="name" required placeholder="Your Name" />
+        <input type="email" id="email" name="email" required placeholder="Your Email" />
+        <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
 </section>
+
 
 
 
 
     </main>
     <footer>
-        <p>&copy; 2024 Bongiwe Malepe. All rights reserved.</p>
+         <p>&copy; 2024 Reage Nkoana and Bongiwe Malepe. All rights reserved.</p>
+         <p>Website by Reage Nkoana. Art by Bongiwe Malepe.</p>
     </footer>
     <script src="script.js"></script>
 </body>
